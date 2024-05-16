@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/car/car.egg-info
+writing ../../build/car/car.egg-info/PKG-INFO
+writing dependency_links to ../../build/car/car.egg-info/dependency_links.txt
+writing entry points to ../../build/car/car.egg-info/entry_points.txt
+writing requirements to ../../build/car/car.egg-info/requires.txt
+writing top-level names to ../../build/car/car.egg-info/top_level.txt
+writing manifest file '../../build/car/car.egg-info/SOURCES.txt'
+reading manifest file '../../build/car/car.egg-info/SOURCES.txt'
+writing manifest file '../../build/car/car.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hamdan/term_des/build/car/build
+creating /home/hamdan/term_des/build/car/build/lib
+creating /home/hamdan/term_des/build/car/build/lib/car
+copying car/__init__.py -> /home/hamdan/term_des/build/car/build/lib/car
+running install
+running install_lib
+creating /home/hamdan/term_des/install/car/lib/python3.10/site-packages/car
+copying /home/hamdan/term_des/build/car/build/lib/car/__init__.py -> /home/hamdan/term_des/install/car/lib/python3.10/site-packages/car
+byte-compiling /home/hamdan/term_des/install/car/lib/python3.10/site-packages/car/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/hamdan/term_des/install/car/share/ament_index
+creating /home/hamdan/term_des/install/car/share/ament_index/resource_index
+creating /home/hamdan/term_des/install/car/share/ament_index/resource_index/packages
+copying resource/car -> /home/hamdan/term_des/install/car/share/ament_index/resource_index/packages
+copying package.xml -> /home/hamdan/term_des/install/car/share/car
+running install_egg_info
+Copying ../../build/car/car.egg-info to /home/hamdan/term_des/install/car/lib/python3.10/site-packages/car-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/hamdan/term_des/build/car/install.log'
