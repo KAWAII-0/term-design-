@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/car_trailer/car_trailer.egg-info/PKG-INFO
+../../build/car_trailer/car_trailer.egg-info/SOURCES.txt
+../../build/car_trailer/car_trailer.egg-info/dependency_links.txt
+../../build/car_trailer/car_trailer.egg-info/requires.txt
+../../build/car_trailer/car_trailer.egg-info/top_level.txt
+../../build/car_trailer/car_trailer.egg-info/zip-safe
+car_trailer/__init__.py
+launch/display.launch.py
+rviz/urdf_config.rviz
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+urdf/car_with_trailer.xacro

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<robot name="car_with_trailer" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="car_length" value="1.0"/>
+  <xacro:property name="car_width" value="0.5"/>
+  <xacro:property name="car_height" value="0.3"/>
+  <xacro:property name="wheel_radius" value="0.1"/>
+  <xacro:property name="trailer_length" value="${car_length * 1.2}"/>
+  <xacro:property name="trailer_width" value="${car_width}"/>
+  <xacro:property name="trailer_height" value="${car_height}"/>
+
+  <!-- Car -->
+  <link name="car_body">
+    <visual>
+      <geometry>
+        <box size="${car_length} ${car_width} ${car_height}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${car_length} ${car_width} ${car_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+  </link>
+
+  <!-- Car Wheels -->
+  <xacro:macro name="wheel" params="name x y">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.05"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1.0"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="car_body"/>
+      <child link="${name}"/>
+      <origin xyz="${x} ${y} -${car_height / 2 + wheel_radius}" rpy="0 1.5708 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- Define Car Wheels -->
+  <xacro:wheel name="front_left_wheel" x="${car_length / 2 - wheel_radius}" y="${car_width / 2 - wheel_radius}"/>
+  <xacro:wheel name="front_right_wheel" x="${car_length / 2 - wheel_radius}" y="-${car_width / 2 - wheel_radius}"/>
+  <xacro:wheel name="rear_left_wheel" x="-${car_length / 2 - wheel_radius}" y="${car_width / 2 - wheel_radius}"/>
+  <xacro:wheel name="rear_right_wheel" x="-${car_length / 2 - wheel_radius}" y="-${car_width / 2 - wheel_radius}"/>
+
+  <!-- Trailer -->
+  <link name="trailer_body">
+    <visual>
+      <geometry>
+        <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${trailer_length} ${trailer_width} ${trailer_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="12.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.12" ixy="0" ixz="0" iyy="0.12" iyz="0" izz="0.12"/>
+    </inertial>
+  </link>
+
+  <!-- Trailer Wheels -->
+  <xacro:macro name="trailer_wheel" params="name x y">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.05"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1.0"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="trailer_body"/>
+      <child link="${name}"/>
+      <origin xyz="${x} ${y} -${trailer_height / 2 + wheel_radius}" rpy="0 1.5708 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- Define Trailer Wheels -->
+  <xacro:trailer_wheel name="trailer_front_left_wheel" x="${trailer_length / 2 - wheel_radius}" y="${trailer_width / 2 - wheel_radius}"/>
+  <xacro:trailer_wheel name="trailer_front_right_wheel" x="${trailer_length / 2 - wheel_radius}" y="-${trailer_width / 2 - wheel_radius}"/>
+  <xacro:trailer_wheel name="trailer_rear_left_wheel" x="-${trailer_length / 2 - wheel_radius}" y="${trailer_width / 2 - wheel_radius}"/>
+  <xacro:trailer_wheel name="trailer_rear_right_wheel" x="-${trailer_length / 2 - wheel_radius}" y="-${trailer_width / 2 - wheel_radius}"/>
+
+  <!-- Joint between Car and Trailer -->
+  <joint name="car_to_trailer_joint" type="fixed">
+    <parent link="car_body"/>
+    <child link="trailer_body"/>
+    <origin xyz="${car_length / 2 + trailer_length / 2} 0 0"/>
+  </joint>
+</robot>

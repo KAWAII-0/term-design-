@@ -1,0 +1,24 @@
+[0.617s] Invoking command in '/home/artem/ros2_ws/src/car_trailer': PYTHONPATH=/home/artem/ros2_ws/build/car_trailer/prefix_override:/home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_trailer build --build-base /home/artem/ros2_ws/build/car_trailer/build install --record /home/artem/ros2_ws/build/car_trailer/install.log --single-version-externally-managed install_data
+[0.808s] running egg_info
+[0.817s] writing ../../build/car_trailer/car_trailer.egg-info/PKG-INFO
+[0.818s] writing dependency_links to ../../build/car_trailer/car_trailer.egg-info/dependency_links.txt
+[0.818s] writing requirements to ../../build/car_trailer/car_trailer.egg-info/requires.txt
+[0.818s] writing top-level names to ../../build/car_trailer/car_trailer.egg-info/top_level.txt
+[0.837s] reading manifest file '../../build/car_trailer/car_trailer.egg-info/SOURCES.txt'
+[0.838s] writing manifest file '../../build/car_trailer/car_trailer.egg-info/SOURCES.txt'
+[0.838s] running build
+[0.838s] running build_py
+[0.839s] copying car_trailer/__init__.py -> /home/artem/ros2_ws/build/car_trailer/build/lib/car_trailer
+[0.839s] running install
+[0.851s] running install_lib
+[0.862s] running install_data
+[0.862s] copying package.xml -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer
+[0.862s] copying urdf/car_with_trailer.xacro -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/urdf
+[0.863s] copying launch/display.launch.py -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/launch
+[0.863s] copying rviz/urdf_config.rviz -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/rviz
+[0.863s] running install_egg_info
+[0.873s] removing '/home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages/car_trailer-0.0.0-py3.10.egg-info' (and everything under it)
+[0.874s] Copying ../../build/car_trailer/car_trailer.egg-info to /home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages/car_trailer-0.0.0-py3.10.egg-info
+[0.874s] running install_scripts
+[0.981s] writing list of installed files to '/home/artem/ros2_ws/build/car_trailer/install.log'
+[1.001s] Invoked command in '/home/artem/ros2_ws/src/car_trailer' returned '0': PYTHONPATH=/home/artem/ros2_ws/build/car_trailer/prefix_override:/home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/car_trailer build --build-base /home/artem/ros2_ws/build/car_trailer/build install --record /home/artem/ros2_ws/build/car_trailer/install.log --single-version-externally-managed install_data

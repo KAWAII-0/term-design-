@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/car_trailer/car_trailer.egg-info/PKG-INFO
+writing dependency_links to ../../build/car_trailer/car_trailer.egg-info/dependency_links.txt
+writing requirements to ../../build/car_trailer/car_trailer.egg-info/requires.txt
+writing top-level names to ../../build/car_trailer/car_trailer.egg-info/top_level.txt
+reading manifest file '../../build/car_trailer/car_trailer.egg-info/SOURCES.txt'
+writing manifest file '../../build/car_trailer/car_trailer.egg-info/SOURCES.txt'
+running build
+running build_py
+copying car_trailer/__init__.py -> /home/artem/ros2_ws/build/car_trailer/build/lib/car_trailer
+running install
+running install_lib
+running install_data
+copying package.xml -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer
+copying urdf/car_with_trailer.xacro -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/urdf
+copying launch/display.launch.py -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/launch
+copying rviz/urdf_config.rviz -> /home/artem/ros2_ws/install/car_trailer/share/car_trailer/rviz
+running install_egg_info
+removing '/home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages/car_trailer-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/car_trailer/car_trailer.egg-info to /home/artem/ros2_ws/install/car_trailer/lib/python3.10/site-packages/car_trailer-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/artem/ros2_ws/build/car_trailer/install.log'
